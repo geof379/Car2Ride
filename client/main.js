@@ -4,7 +4,7 @@ Car2Ride.config(function ($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'views/home.html',
-      access: {restricted: false}
+      access: {restricted: true}
     })
     .when('/login', {
       templateUrl: 'views/login.html',
