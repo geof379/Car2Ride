@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Multi Step Form with Progress Bar using jQuery and CSS3</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Inclusion pour datarange -->
+    <link rel="stylesheet" type="text/css" href="datapicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="datapicker/bootstrap.css" />
+
+  </head>
+
+  <body>
+    <!-- multistep form -->
+<form id="msform">
+  <!-- progressbar -->
+  <ul id="progressbar">
+    <li class="active">Vehicle and details</li>
+    <li>Pictures</li>
+    <li>Car availability</li>
+  </ul>
+  <!-- fieldsets -->
+  <fieldset>
+    <h2 class="fs-title">LIST MY CAR</h2>
+    <h3 class="fs-subtitle">Step 1: Vehicle and details</h3>
+    <div class="section-left">
+      <select>
+        <option value="0">Select brand</option>
+        <option value="1">Brand 1</option>
+        <option value="2">Brand 2</option>
+        <option value="3">Brand 3</option>
+      </select>
+      <select>
+        <option value="0">Select category</option>
+        <option value="1">Category 1</option>
+        <option value="2">Category 2</option>
+        <option value="3">Category 3</option>
+      </select>
+      <select>
+        <option value="0">Select year</option>
+        <option value="1">2017</option>
+        <option value="2">2016</option>
+        <option value="3">2015</option>
+      </select>
+      <select>
+        <option value="0">Select gaz type</option>
+        <option value="1">Gaz 1</option>
+        <option value="2">Gaz 2</option>
+        <option value="3">Gaz 3</option>
+      </select>
+      <select>
+        <option value="0">Select color</option>
+        <option value="1">Color 1</option>
+        <option value="2">Color 2</option>
+        <option value="3">Color 3</option>
+      </select>
+    </div>
+    <div class="section-rigth">
+      <select>
+        <option value="0">Select model</option>
+        <option value="1">Model 1</option>
+        <option value="2">Model 2</option>
+        <option value="3">Model 3</option>
+      </select>
+      <select>
+        <option value="0">Select odometer</option>
+        <option value="1">Odometer 1</option>
+        <option value="2">Odometer 2</option>
+        <option value="3">Odometer 3</option>
+      </select>
+      <select>
+        <option value="0">Select transmission</option>
+        <option value="1">Transmission 1</option>
+        <option value="2">Transmission 2</option>
+        <option value="3">Transmission 3</option>
+      </select>
+      <select>
+        <option value="0">Select nmumber of passenger</option>
+        <option value="1">Gaz 1</option>
+        <option value="2">Gaz 2</option>
+        <option value="3">Gaz 3</option>
+      </select>
+    </div>
+    <div class="section-bottom">
+      <textarea name="address" placeholder="Anything elese we should know about your car ?"></textarea>
+    </div>
+    <div class="clearfix">
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">LIST MY CAR</h2>
+    <h3 class="fs-subtitle">Step 2: Pictures</h3>
+    <div class="section-left">
+      <img src="images/myCar.jpg" alt="My Car">
+    </div>
+    <div class="section-rigth">
+      <input type="file" name="mon_fichier" id="mon_fichier" />
+      <input type="file" name="mon_fichier" id="mon_fichier" />
+      <input type="file" name="mon_fichier" id="mon_fichier" />
+      <input type="file" name="mon_fichier" id="mon_fichier" />
+
+    </div>
+    <div class="clearfix">
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">List my car</h2>
+    <h3 class="fs-subtitle">Step 3: Car availability</h3>
+
+    <input type="text" name="adress" placeholder="Where is your car located" />
+    <input class="" name="datefilter" placeholder="Select the days your car is available"/>
+    <div class="element-left">
+      <p>*** Please note that you car needs to be available for at least 24 hours ***</p>
+      <input type="checkbox" name="vehicle" value="Bike" style="width:20px"> My car is available any days at any time
+      <select>
+        <option value="0">Select Maximum km allowed per day </option>
+        <option value="1">0 to 100km</option>
+        <option value="2">100 to 200km</option>
+        <option value="3">200 to 300km</option>
+        <option value="4">300 to 500km</option>
+      </select>   
+      <input type="text" name="adress" placeholder="Price per day: Enter Amount" />
+      <input type="checkbox" name="vehicle" value="Bike" style="width:20px"> Auto-confirm reservation when someone rent my car within the selected days of availability
+    </div>
+
+    <div>
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="submit" name="submit" class="submit action-button" value="Submit" />
+    </div>
+  </fieldset>
+</form>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <!-- Start Data Picker -->
+    <!-- Include Required Prerequisites -->
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>-->
+
+    <script type="text/javascript" src="datapicker/moment.min.js"></script>
+    <script type="text/javascript" src="datapicker/daterangepicker.js"></script><!-- Bootstrap -->
+    <script type="text/javascript" src="datapicker/bootstrap.min.js"></script>
+
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript">
+      $(function() {
+
+        $('input[name="datefilter"]').daterangepicker({
+            autoUpdateInput: false,
+            locale: {
+                cancelLabel: 'Clear'
+            }
+        });
+
+        $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+            $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+        });
+
+        $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+            $(this).val('');
+        });
+
+      });
+    </script>
+
+
+
+  </body>
+</html>
